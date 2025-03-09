@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BeSpokedBikesAPI.Controllers;
 
-[Authorize]
-[ApiController]
+//[Authorize]
 [Route("api/products")]
+[ApiController]
 public class ProductsController : ControllerBase
 {   
     private readonly ApplicationDbContext _context;
@@ -19,7 +19,7 @@ public class ProductsController : ControllerBase
     }
 
     // Get all products
-    [HttpGet]
+    [HttpGet("allproducts")]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
         return await _context.Products.ToListAsync();

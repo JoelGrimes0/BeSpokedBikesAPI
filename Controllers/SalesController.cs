@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BeSpokedBikesAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/sales")]
     [ApiController]
     public class SalesController : ControllerBase
@@ -18,7 +18,7 @@ namespace BeSpokedBikesAPI.Controllers
         }
 
         // GET: api/Sales
-        [HttpGet]
+        [HttpGet("allsales")]
         public async Task<ActionResult<IEnumerable<Sale>>> GetSales()
         {
             return await _context.Sales

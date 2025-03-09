@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BeSpokedBikesAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/discounts")]
     [ApiController]
     public class DiscountsController : ControllerBase
@@ -18,7 +18,7 @@ namespace BeSpokedBikesAPI.Controllers
         }
 
         // GET: api/Discounts
-        [HttpGet]
+        [HttpGet("alldiscounts")]
         public async Task<ActionResult<IEnumerable<Discount>>> GetDiscounts()
         {
             return await _context.Discounts

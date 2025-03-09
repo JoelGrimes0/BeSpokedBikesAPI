@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BeSpokedBikesAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/customers")]
     [ApiController]
     public class CustomersController : ControllerBase
@@ -19,7 +19,7 @@ namespace BeSpokedBikesAPI.Controllers
         }
 
         // GET: api/Customers
-        [HttpGet]
+        [HttpGet("allcustomers")]
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
         {
             return await _context.Customers.ToListAsync();
