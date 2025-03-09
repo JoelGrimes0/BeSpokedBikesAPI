@@ -15,7 +15,7 @@ const Customers = () => {
     useEffect(() => {
         const fetchCustomers = async () => {
             const token = localStorage.getItem("token");
-            const res = await axios.get("https://localhost:5001/api/customers", {
+            const res = await axios.get("http://localhost:7153/api/customers/allcustomers", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setCustomers(res.data);

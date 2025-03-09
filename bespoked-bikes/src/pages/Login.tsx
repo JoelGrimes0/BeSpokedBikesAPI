@@ -12,14 +12,15 @@ const Login = () => {
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const res = await axios.post("https://localhost:5001/api/users/login", {
+            const res = await axios.post("http://localhost:7153/api/users/login", {
                 username,
                 password,
             });
             localStorage.setItem("token", res.data.token);
             navigate("/dashboard");
         } catch {
-            setError("Invalid credentials.");
+            console.error(error);
+            setError("Invalid credentials." );
         }
     };
 

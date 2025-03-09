@@ -15,7 +15,7 @@ const QuarterlyReport = () => {
     useEffect(() => {
         const fetchReport = async () => {
             const token = localStorage.getItem("token");
-            const res = await axios.get("https://localhost:5001/api/sales/quarterly-report", {
+            const res = await axios.get("http://localhost:7153/api/sales/commissionReport", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setReport(res.data);

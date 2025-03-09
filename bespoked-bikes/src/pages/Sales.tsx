@@ -23,7 +23,7 @@ const Sales = () => {
 
     const fetchSales = async () => {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`https://localhost:5001/api/sales?startDate=${startDate}&endDate=${endDate}`, {
+        const res = await axios.get(`http://localhost:7153/api/sales/filter?startDate=${startDate}&endDate=${endDate}`, {
             headers: { Authorization: `Bearer ${token}` },
         });
         setSales(res.data);

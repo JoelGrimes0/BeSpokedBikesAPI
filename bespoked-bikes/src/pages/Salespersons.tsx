@@ -16,7 +16,7 @@ const Salespersons = () => {
     useEffect(() => {
         const fetchSalespersons = async () => {
             const token = localStorage.getItem("token");
-            const res = await axios.get("https://localhost:5001/api/salespersons", {
+            const res = await axios.get("http://localhost:7153/api/salespersons/allSalespersons", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setSalespersons(res.data);

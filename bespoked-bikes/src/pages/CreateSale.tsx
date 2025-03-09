@@ -28,7 +28,7 @@ const CreateSale = () => {
 
     const fetchData = async (endpoint: string, setData: Function) => {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`https://localhost:5001/api/${endpoint}`, {
+        const res = await axios.get(`https://localhost:7153/api/${endpoint}`, {
             headers: { Authorization: `Bearer ${token}` },
         });
         setData(res.data);
@@ -50,7 +50,7 @@ const CreateSale = () => {
         try {
             const token = localStorage.getItem("token");
             await axios.post(
-                "https://localhost:5001/api/sales",
+                "https://localhost:7153/api/sales",
                 {
                     productId: selectedProduct,
                     salespersonId: selectedSalesperson,

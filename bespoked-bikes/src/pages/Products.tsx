@@ -16,7 +16,7 @@ const Products = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             const token = localStorage.getItem("token");
-            const res = await axios.get("https://localhost:5001/api/products", {
+            const res = await axios.get("http://localhost:7153/api/products/allproducts", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setProducts(res.data);
