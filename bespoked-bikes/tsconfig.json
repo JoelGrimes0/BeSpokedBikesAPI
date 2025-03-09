@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [ "ESNext", "ES2015", "ES2016", "DOM", "DOM.Iterable" ],
+    "module": "ESNext",
+    "moduleResolution": "node"
+  },
+  "include": [ "src/**/*", "types/**/*" ]
+}

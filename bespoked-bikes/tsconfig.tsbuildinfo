@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/pages/createsale.tsx","./src/pages/customers.tsx","./src/pages/dashboard.tsx","./src/pages/login.tsx","./src/pages/products.tsx","./src/pages/quarterlyreport.tsx","./src/pages/sales.tsx","./src/pages/salespersons.tsx","./src/pages/newfile.d.ts"],"errors":true,"version":"5.7.3"}
